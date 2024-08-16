@@ -5,7 +5,7 @@ from utils import ExecutableUtil
 
 
 class Git(ExecutableUtil):
-    """Класс для взаимодействия с Git."""
+    """A class for interacting with Git."""
 
     def __init__(self):
         utils_path = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +19,7 @@ class Git(ExecutableUtil):
         self.commit()
 
     def add(self, data: str) -> None:
-        """Записывает данные в файл words.in.
+        """Writes data to the words.in file.
 
         Args:
             data (str): Данные для записи в файл.
@@ -32,9 +32,9 @@ class Git(ExecutableUtil):
                 file.write(word + '\n')
 
     def commit(self) -> None:
-        """Коммитит и пушит файл в репозиторий, используя скрипт commit.sh."""
+        """Commit and push the file to the repository using the commit.sh script."""
         script_fpath = os.path.join(self.form_parser_path, 'commit.sh')
         try:
             subprocess.run(['bash', script_fpath], input=data.encode(), check=True)
         except subprocess.CalledProcessError as e:
-            print(f"Ошибка при выполнении скрипта commit.sh: {e}")
+            print(f"Error while executing the commit.sh script: {e}")
