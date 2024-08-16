@@ -1,0 +1,10 @@
+{
+    "table": "1MIm7xDltfrmiPlEpL3fbpU-A2zH7Q-8BczxMxU4HDWE",
+    "mail-server": {
+        "protocol": "smtp",
+        "host": "q.mail.ru",
+        "port": 25,
+        "user": "admin-form",
+        "pass": "admin-pass"
+    }
+}
